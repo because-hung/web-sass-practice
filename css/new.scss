@@ -1,0 +1,404 @@
+@import 'reset';
+@import 'rwd';
+@import 'hideText';
+
+$font-size-s:18px;
+$font-size-m:20px;
+$font-size-l:24px;
+$color-light:white;
+$text-center: center;
+
+.wrap {
+    max-width: 1002px;
+    ;
+    margin: 0 auto;
+
+    @include ipad() {
+        height: auto;
+    }
+
+    @include iphone() {
+        position: relative;
+    }
+}
+
+
+.header {
+    background-color: #f6f6f6;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.top {
+    float: right;
+
+    li {
+        float: left;
+    }
+
+    .fb {
+        padding-right: 5px;
+    }
+
+    .tw {
+        border-left: #009671 2px solid;
+        padding-left: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: purple;
+        font-size: $font-size-s;
+        padding-right: 5px;
+        margin-top: 5px;
+    }
+
+    a:hover {
+        font-size: $font-size-m *1.1;
+        color: gray;
+    }
+
+    img {
+        margin-right: 5px;
+    }
+
+    @include ipad() {
+        margin-right: 15px;
+    }
+
+    @include iphone() {
+        float: none;
+        position: absolute;
+        left: 35%;
+    }
+}
+
+@import 'clear';
+
+.img {
+    float: left;
+
+    h1 {
+        a {
+
+            display: block;
+            height: 50px;
+            width: 224px;
+            background-image: url(../img/logo.png);
+            @include hide-text;
+
+        }
+    }
+
+    &:hover {
+        background: aqua;
+    }
+
+    @include iphone() {
+        float: none;
+        margin-left: 33%;
+        margin-top: 20px;
+    }
+}
+
+
+.topmenu {
+    float: right;
+    margin-top: 10px;
+
+    li {
+        float: left;
+    }
+
+    a {
+        text-decoration: none;
+        display: block;
+        padding: 20px;
+        color: green;
+        font-size: $font-size-s;
+    }
+
+    &:hover {
+        border-bottom: 4px solid green;
+        font-weight: 800;
+    }
+
+    @include iphone() {
+        float: none;
+        margin-left: 25%;
+    }
+}
+
+
+.image {
+    height: 346px;
+    display: block;
+    background-image: url(../img/banner.png);
+    position: relative;
+
+    @include iphone() {
+        max-width: 100%;
+        background-image: url(../img/small.png);
+        background-repeat: no-repeat;
+    }
+
+    h2 {
+        color: #f6f6f6;
+        line-height: 1.5;
+        position: absolute;
+        left: 15px;
+        top: 150px;
+        font-size: $font-size-l;
+
+        @include iphone() {
+            font-size: 1.2em;
+            margin-left: 10px;
+        }
+    }
+
+}
+
+/*top*/
+
+.middle {
+    margin-top: 50px;
+    height: 360px;
+
+    h2 {
+        text-align: $text-center;
+        font-size: $font-size-s * 1.1;
+        font-weight: 700;
+    }
+
+    p {
+        padding: 20px;
+        line-height: 1.5;
+        height: auto;
+        text-align: $text-center;
+        margin: 0 auto;
+    }
+
+}
+
+.req {
+    float: left;
+    width: 33.333%;
+
+    @include iphone() {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .img-container {
+        width: 100%;
+        text-align: $text-center;
+        height: 100px;
+
+        img {
+            height: 100%;
+            @include ipad() {
+           margin-left: 10px;
+
+           
+            }
+        }
+    }
+
+    ul {
+        text-align: $text-center;
+        li{
+            margin-top: 6px;
+           
+        }
+    }
+
+    h2 {
+        margin: 15px 0;
+    }
+
+}
+
+/*middle*/
+
+form {
+    height: auto;
+}
+.form h2 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 28px;
+
+    padding: 50px;
+}
+
+table {
+    width: 100%;
+
+}
+
+
+th {
+    padding: 10px;
+    text-align: left;
+    background: honeydew;
+}
+
+td {
+    padding: 10px;
+    border-top: 2px lightgray solid;
+    border-bottom: 2px lightgray solid;
+}
+
+.comment:hover {
+    border: 3px solid yellow;
+
+}
+
+.third {
+    padding-right: 40px;
+
+}
+
+
+.bottomform {
+    background: linear-gradient(to bottom, #00694f, #009671);
+    margin-top: 50px;
+    height: 450px;
+
+    @include ipad() {
+        height: auto;
+        margin-top: 30px;
+    }
+
+    h2 {
+        color: $color-light;
+        text-align: $text-center;
+        font-size: $font-size-l;
+        padding: 30px;
+        line-height: 1.5;
+        font-weight: 700;
+    }
+}
+
+.comment {
+
+    margin-left: 25px;
+    float: left;
+
+    @include BigSize() {
+        width: 35%;
+        height: auto;
+    }
+
+    @include ipad() {
+        width: 70%;
+        margin-left: 15%;
+        margin-bottom: 20px;
+    }
+
+}
+
+.inputbox {
+    float: left;
+    max-width: 100%;
+    padding: 20px;
+
+    @include ipad() {
+        float: none;
+    }
+
+    input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 400px;
+        height: auto;
+        padding-left: 5px;
+
+        @include ipad() {
+            width: 55%;
+            margin-left: 20%;
+        }
+
+        &:hover {
+            border: 5px skyblue solid;
+        }
+    }
+
+    label {
+        color: $color-light;
+
+        @include ipad() {
+            margin-left: 20%;
+        }
+    }
+
+    &::placeholder {
+        padding-left: 5px;
+    }
+
+    .button {
+        background: #8de1c6;
+        width: 60px;
+        height: 30px;
+        float: right;
+
+        @include iphone() {
+            margin-top: 30px;
+            float: none;
+            margin-left: 45%;
+        }
+
+        &:hover {
+            width: 70px;
+            height: 40px;
+            font-size: $font-size-m;
+            color: $color-light;
+        }
+    }
+}
+
+/*buttom form*/
+
+.footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 50px;
+}
+
+.img2 {
+    float: left;
+    @include iphone(){
+        display: none;
+    }
+    &:hover{
+        background: yellow;
+    }
+    a{
+        display: block;
+        height: 50px;
+        width: 224px;
+        
+        background-image:url(../img/logo2.png);  
+        &:hover{
+            border: #00694f solid 3px;
+        }
+    }
+    
+}
+
+.message{
+
+    float: right;
+    line-height: 1.5;
+    padding: 5px;
+    letter-spacing: 2px;
+    @include iphone(){
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+         width: 50%;
+         margin-bottom: 20px;
+         font-size: 20px; 
+    }
+}
+/*footer*/

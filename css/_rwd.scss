@@ -1,0 +1,17 @@
+@mixin BigSize {
+    @media(max-width:975px){
+        @content
+           }
+}
+
+@mixin ipad {
+    @media(max-width:768px){
+     @content
+        }
+    }
+@mixin iphone {
+        @media(max-width:569px){
+         @content
+            }
+        }
+    
